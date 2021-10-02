@@ -292,7 +292,7 @@ router.get('/china', async (req, res, next) => {
 router.get('/cewe/vietnam', async (req, res, next) => {
         var apikeyInput = req.query.apikey
 	if(!apikeyInput) return res.json(loghandler.notparam)	
-	if (apikeyInput != 'Yuzzu')  return res.sendFile(__path + '/views/eror.html')
+	if (apikeyInput != 'Yuzzu', 'Nasa')  return res.sendFile(__path + '/views/eror.html')
        fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/vietnam.json`))
         .then(response => response.json())
         .then(data => {
